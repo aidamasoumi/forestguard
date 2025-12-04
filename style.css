@@ -1,0 +1,239 @@
+/**
+ * ForestGuard – Map Page (Aida)
+ * AIDA WORKED ON THIS
+ 
+ * This file styles the main map page for the ForestGuard project.
+ * I focused on keeping the UI clean, simple, and easy to navigate.
+ * Features include: a fixed header, a responsive layout, a Leaflet.js map,
+ * colour coded markers (Alert / Information / Protected), and a centered footer
+ * with social icons.
+ * 
+ * I used flexbox for alignment, soft green branding for consistency, and 
+ * viewport-based sizing to reduce extra white space. My goal was to make the 
+ * page look modern, accessible, and clear for users.
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f5;
+}
+
+/*header*/
+
+.main-header {
+  width: 100%;
+  background-color: #15803d;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.header-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.header-logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Navigation bar */
+.header-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.header-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.header-nav .nav-link:hover,
+.header-nav .nav-link.active {
+  text-decoration: underline;
+}
+
+/* Right side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.lang-btn,
+.login-btn {
+  background: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.lang-btn:hover,
+.login-btn:hover {
+  background: #f0f0f0;
+}
+
+/* ====== MAIN LAYOUT & MAP ====== */
+
+.main {
+  padding: 90px 32px 32px;     
+  display: flex;
+  justify-content: center;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+#map,
+.map {
+  background: #d8d8d8;
+  height: 78vh;                /*map height*/
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ====== LEGEND (Alert / Information / Protected) ====== */
+
+.legend {
+  display: flex;
+  gap: 18px;
+  margin-top: 15px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+.dot.alert {
+  background-color: #e63a3a;   /* red*/
+}
+
+.dot.info {
+  background-color: #f4e45b;   /* yellow */
+}
+
+.dot.protected {
+  background-color: #79a8ff;   /*blue*/
+}
+
+
+.dot-red {
+  background-color: #e63a3a; /*red*/
+}
+.dot-yellow {
+  background-color: #f4e45b; /*yellow*/
+}
+.dot-blue {
+  background-color: #79a8ff; /*blue*/
+}
+
+/* Footer*/
+
+.site-footer {
+  background-color: #15803d; /*green*/
+  padding: 22px 0 26px;
+  color: white;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  gap: 8px;
+}
+
+
+.footer-links {
+  order: 1;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-social {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;        
+}
+
+.footer-social a {
+  font-size: 22px;
+}
+
+
+.footer-social .fa-x-twitter { color: #000000; } /*black*/
+.footer-social .fa-instagram { color: #E1306C; } /*pink*/
+.footer-social .fa-youtube   { color: #FF0000; } /*red*/
+.footer-social .fa-linkedin  { color: #0077B5; } /*blue*/
+
+.footer-social a i {
+  transition: 0.25s;
+}
+
+.footer-social a i:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+
+.footer-copy {
+  order: 3;
+  font-size: 13px;
+  opacity: 0.9;
+}

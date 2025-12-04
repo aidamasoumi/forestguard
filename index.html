@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>ForestGuard - Map Page</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+ <header class="main-header">
+  <div class="header-inner">
+
+    <!-- Left: Logo -->
+    <div class="header-left">
+      <span class="header-logo">🌿 ForestGuard</span>
+    </div>
+
+    <!-- Center: Navigation -->
+    <nav class="header-nav">
+  <a href="#" class="nav-link">Dashboard</a>
+  <a href="#" class="nav-link active">Map</a>
+  <a href="#" class="nav-link">Reports</a>
+  <a href="#" class="nav-link">Analytics</a>
+  <a href="#" class="nav-link">Storytelling</a>
+</nav>
+
+    <!-- Right: Search + Language + Login -->
+    <div class="header-right">
+      <input type="text" placeholder="Search..." class="search-box">
+
+      <button class="lang-btn">🌍 English ▾</button>
+
+      <button class="login-btn">Login</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- ========== MAP SECTION ========== -->
+  <main class="map-section">
+    
+    <div id="map" class="map"></div>
+
+   
+    <div class="legend">
+      <div><span class="dot alert"></span> Alert</div>
+      <div><span class="dot info"></span> Information</div>
+      <div><span class="dot protected"></span> Protected</div>
+    </div>
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Policy</a>
+      <a href="#">Contact us</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+
+    <div class="footer-copy">
+      © 2025 copyright reserved ForestGuard
+    </div>
+
+  </div>
+</footer>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
